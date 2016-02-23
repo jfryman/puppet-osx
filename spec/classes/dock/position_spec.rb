@@ -4,7 +4,7 @@ describe 'osx::dock::position' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
   it do
-    should include_class('osx::dock')
+    should contain_class('osx::dock')
     should contain_boxen__osx_defaults('position').with_value('right')
   end
 
@@ -12,7 +12,7 @@ describe 'osx::dock::position' do
     let(:params) { {:position => 'left'} }
 
     it 'allows you to pass a position' do
-      should include_class('osx::dock')
+      should contain_class('osx::dock')
 
       should contain_boxen__osx_defaults('position').with({
         :key    => 'orientation',

@@ -4,7 +4,7 @@ class osx::global::natural_mouse_scrolling($enabled = true) {
     ensure => present,
     domain => 'NSGlobalDomain',
     key    => 'com.apple.swipescrolldirection',
-    type   => 'boolean',
+    type   => 'bool',
     value  => $enabled,
     user   => $::boxen_user;
   }

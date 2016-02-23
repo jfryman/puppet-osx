@@ -9,7 +9,7 @@ describe 'osx::mouse::swipe_between_pages' do
       :domain => 'NSGlobalDomain',
       :value  => false,
       :user   => facts[:boxen_user],
-      :type   => 'boolean'
+      :type   => 'bool',
     })
   end
 
@@ -21,7 +21,7 @@ describe 'osx::mouse::swipe_between_pages' do
         :domain => 'NSGlobalDomain',
         :value  => true,
         :user   => facts[:boxen_user],
-        :type   => 'boolean'
+        :type   => 'bool',
       })
     end
   end

@@ -4,7 +4,7 @@ class osx::global::disable_remote_control_ir_receiver {
     ensure => present,
     domain => '/Library/Preferences/com.apple.driver.AppleIRController',
     key    => 'DeviceEnabled',
-    type   => 'boolean',
+    type   => 'bool',
     value  => false,
     user   => root;
   }

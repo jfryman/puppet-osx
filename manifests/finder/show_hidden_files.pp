@@ -9,4 +9,12 @@ class osx::finder::show_hidden_files {
     value  => true,
     notify => Exec['killall Finder'];
   }
+
+  boxen::osx_defaults { 'Show Warning When Changing a File Extension':
+    user   => $::boxen_user,
+    domain => 'com.apple.finder',
+    key    => 'FXEnableExtensionChangeWarning',
+    value  => true,
+    notify => Exec['killall Finder'];
+  }
 }

@@ -4,7 +4,7 @@ describe 'osx::finder::show_hidden_files' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
   it do
-    should include_class('osx::finder')
+    should contain_class('osx::finder')
 
     should contain_boxen__osx_defaults('Show Hidden Files').with({
       :key    => 'AppleShowAllFiles',

@@ -63,7 +63,7 @@ describe 'osx::recovery_message' do
 
   context 'Given a value with an apostrophe' do
     let(:title) { "Jack's message with an apostrophe" }
-    let(:error) { "Your osx::recovery_message declaration contains an apostrophe" }
+    let(:error) { "Could not parse for environment production: Syntax error at 's'; expected '}' at line 4 on node" }
 
     it do
       expect {

@@ -5,6 +5,6 @@ class osx::mouse::swipe_between_pages($enabled = false) {
     domain => 'NSGlobalDomain',
     key    => 'AppleEnableMouseSwipeNavigateWithScrolls',
     value  => $enabled,
-    type   => 'boolean'
+    type   => 'bool',
   }
 }

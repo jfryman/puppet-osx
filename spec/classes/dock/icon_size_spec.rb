@@ -4,7 +4,7 @@ describe 'osx::dock::icon_size' do
   let(:facts) { {:boxen_user => 'ilikebees'} }
 
   it do
-    should include_class('osx::dock')
+    should contain_class('osx::dock')
     should contain_boxen__osx_defaults('icon size').with_value(36)
   end
 
@@ -12,7 +12,7 @@ describe 'osx::dock::icon_size' do
     let(:params) { {:size => 1} }
 
     it 'allows you to pass a size' do
-      should include_class('osx::dock')
+      should contain_class('osx::dock')
 
       should contain_boxen__osx_defaults('icon size').with({
         :key    => 'tilesize',
